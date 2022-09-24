@@ -1,0 +1,9 @@
+[context.production]
+  command = "yarn build"
+  [context.production.environment]
+    VITE_STRIPE_PUBLISHABLE_KEY = "pk_test_51LlG58JGOpwuvSvrrCxya2vwF4TO4SFRTxxBcfEeGsXfIQTIIPKH1ZR6fMjtO9ExsYWQRsKc8BbLRCeR92c0E8Pj00IlXaKwuE"
+    STRIPE_SECRET_KEY = "sk_test_51LlG58JGOpwuvSvr9bAcLimwxtWUTVd4vsFHW0UsjXfbE6B9K7BYi0Qf9L7EHlvjD5hqxqVmI6oH3NEubdUuDkCh00Pek26wy0"
+  # Deploys from main branch run this plugin in the build.
+  # Plugins context requires double brackets.
+  [[context.production.plugins]]
+    package = "@netlify/plugin-sitemap"
